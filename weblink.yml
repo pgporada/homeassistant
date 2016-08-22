@@ -1,0 +1,9 @@
+---
+#  Weblinks are links that show up in the UI for
+#  the convenience of the user. Mainly links to
+#  relevant external services.
+
+entities:
+  - name: pfsense
+    url: !env_var PFSENSE_URL
+    icon: mdi:server-security

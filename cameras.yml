@@ -1,0 +1,6 @@
+---
+
+# This is technically a camera per https://home-assistant.io/components/camera.generic/
+- platform: generic
+  still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=DTX&brand=wui&num=10&delay=15&type=N0R&frame=0&scale=0.39891304347826084&noclutter=0&showstorms=99&mapx=400&mapy=240&centerx=396.86648501362396&centery=80.19073569482285&transx=-3.133514986376042&transy=-159.80926430517715&showlabels=1&severe=0&rainsnow=1&lightning=1&smooth=1&rand=24530491&lat=0&lon=0&label=you
+  name: Weather Radar

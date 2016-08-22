@@ -1,0 +1,57 @@
+---
+Security:
+  view: yes
+  entities:
+    - group.camera
+
+Other:
+  view: yes
+  entities:
+    - group.people
+    - group.outdoors
+    - group.scenes
+    - group.computer
+
+Admin:
+  view: yes
+  entities:
+    - group.network
+
+Network:
+  - sensor.speedtest_upload
+  - sensor.speedtest_download
+  - sensor.speedtest_ping
+  - weblink.pfsense
+
+People:
+  - device_tracker.his_phone
+
+Outdoors:
+  view: yes
+  entities:
+    - sun.sun
+    - sensor.weather_temperature
+    - sensor.weather_humidity
+    #- camera.weather_radar
+
+Computer:
+  - switch.sound
+  - switch.monitors
+
+Commute:
+  view: yes
+  entities:
+    - sensor.his_morning
+    - sensor.his_evening
+
+Screenshot:
+  view: yes
+  entities:
+    - group.camera
+    - group.commute
+    - group.outdoors
+    - group.computer
+    - group.processes
+    - group.network
+    - group.server
+    - group.home_assistant

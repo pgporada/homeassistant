@@ -1,0 +1,17 @@
+---
+#  Monitor some basic weather conditions.
+#  Temperature and humidity are also monitored
+#  indoors so comparisons can be made.
+
+- platform: forecast
+  api_key: !env_var FORECASTIO_API_KEY
+  monitored_conditions:
+  units: auto
+  monitored_conditions:
+    - icon
+    - precip_intensity
+    - temperature
+    - apparent_temperature
+    - humidity
+    - nearest_storm_distance
+    - nearest_storm_bearing

@@ -1,1 +1,5 @@
 export_env.env
+home-assistant.log
+home-assistant_v2.db
+*.db
+deps/*

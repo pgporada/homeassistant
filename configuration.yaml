@@ -1,0 +1,107 @@
+---
+####################################################
+#                                                  #
+#                  Basic Settings                  #
+#                                                  #
+####################################################
+
+###  Global configuration ###
+#  Note that `customize` is nested within `homeassistant`.
+
+homeassistant:
+  name: Phil & Jenny's House
+  unit_system: imperial
+  latitude: !env_var HOME_LATITUDE
+  longitude: !env_var HOME_LONGITUDE
+  time_zone: !env_var HOME_TIMEZONE
+  elevation: !env_var HOME_ELEVATION
+  customize: !include_dir_merge_named customizations
+
+###  Zones  ###
+zone:
+  - name: Home
+    latitude: !env_var HOME_LATITUDE
+    longitude: !env_var HOME_LONGITUDE
+    radius: 300
+    icon: social:people
+
+  - name: Phil's Work
+    latitude: !env_var HIS_WORK_LATITUDE
+    longitude: !env_var HIS_WORK_LONGITUDE
+    radius: 300
+  
+  - name: Jenny's Work
+    latitude: !env_var HER_WORK_LATITUDE
+    longitude: !env_var HER_WORK_LONGITUDE
+    radius: 300
+
+###  HTTP  ###
+http:
+  #api_password: !env_var HASS_API_PASSWORD
+
+####################################################
+#                                                  #
+#                     Includes                     #
+#                                                  #
+####################################################
+
+###  Devices  ###
+#  Devices (usually phones) are tracked for presence detection.
+device_tracker: !include device_trackers.yml
+
+###  Cameras  ###
+#camera: !include cameras.yml
+
+###  Switches  ###
+#  Switches are anything (hardware or software) that can turn
+#  on or off.
+switch: !include_dir_merge_list switches
+
+###  Sensors  ###
+#  Sensors are anything (hardware or software) that has a state.
+sensor: !include_dir_merge_list sensors
+
+###  Groups  ###
+group: !include groups.yml
+
+###  Scenes  ###
+scene: !include scenes.yml
+
+###  Scripts  ###
+script: !include_dir_named scripts
+
+###  Automation  ###
+automation: !include_dir_list automation
+
+###  Notification  ###
+notify: !include notify.yml
+
+###  Weblinks  ###
+weblink: !include weblink.yml
+
+###  Input Selects  ###
+input_select: !include input_select.yml
+
+###  Shell Commands  ###
+shell_command: !include shell_commands.yml
+
+###  Logger  ###
+logger: !include logger.yml
+
+####################################################
+#                                                  #
+#                     Enables                      #
+#                                                  #
+####################################################
+
+###  Sun  ###
+sun:
+
+###  Logbook  ###
+logbook:
+
+###  History  ###
+history:
+
+###  Frontend  ###
+frontend:
